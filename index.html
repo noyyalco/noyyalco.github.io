@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noyyal Labs</title>
+
+  <meta name="description" content="Noyyal Labs — Your AI Experiments and Adoption Partner." />
+
+  <style>
+    :root {
+      --bg: #000000;
+      --body: #ffffff;
+      --heading: #00ff41;
+      --muted: #aaaaaa;
+      --border: #1f1f1f;
+      --max-width: 880px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--body);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+      line-height: 1.6;
+      padding: 60px 20px;
+    }
+
+    .terminal-window {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      box-shadow: 0 0 20px rgba(0,255,65,0.05);
+    }
+
+    .terminal-header {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      border-bottom: 1px solid var(--border);
+      background: #0a0a0a;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .dot.red { background: #ff5f56; }
+    .dot.yellow { background: #ffbd2e; }
+    .dot.green { background: #27c93f; }
+
+    .terminal-body {
+      padding: 40px 30px 50px 30px;
+    }
+
+    /* Top Bar (Brand + Menu aligned) */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--body);
+      text-decoration: none;
+      opacity: 0.9;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      opacity: 1;
+    }
+
+    /* Pipe separator */
+    nav a:not(:last-child)::after {
+      content: "  |  ";
+      color: var(--muted);
+    }
+
+    h1, h2 {
+      color: var(--heading);
+      font-weight: normal;
+      text-shadow: 0 0 6px var(--heading);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+    }
+
+    p {
+      color: var(--body);
+      margin: 8px 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    section {
+      margin-top: 2.5rem;
+    }
+
+    footer {
+      margin-top: 3.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    .cursor::after {
+      content: "_";
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 30px 15px; }
+      .top-bar { flex-direction: column; gap: 15px; text-align: center; }
+      nav { font-size: 0.85rem; }
+      .terminal-body { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="terminal-window">
+
+    <div class="terminal-header">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green"></div>
+    </div>
+
+    <div class="terminal-body">
+
+      <div class="top-bar">
+        <h1 class="cursor">Noyyal Labs</h1>
+        <nav>
+          <a href="#about">About Us</a>
+          <a href="#blogs">Blogs</a>
+          <a href="#experiments">Experiments</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+      </div>
+
+      <p class="muted">Your AI Experiments and Adoption Partner.</p>
+
+      <section id="work">
+        <h2>What We Do</h2>
+        <p>We turn AI curiosity into real adoption.</p>
+        <p>Prototype fast. Validate impact. Deploy what works.</p>
+        <p>We redesign workflows around AI — so it drives leverage, not noise.</p>
+        <p>Strategy. Experiments. Deployment.</p>
+      </section>
+
+      <section id="values">
+        <h2>Our Philosophy</h2>
+        <p>Rapid iteration over long speculation.</p>
+        <p>Rebuild workflows to suit AI — not force AI into broken processes.</p>
+        <p>Frugal, test-driven adoption of AI systems.</p>
+      </section>
+
+      <section id="notes">
+        <h2>Notes & Experiments</h2>
+        <p>We publish ideas, experiments, and implementation learnings.</p>
+        <p>Sometimes about systems. Sometimes about software. Always about clarity.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>tahr@noyyal.co</p>
+        <p>vicky@noyyal.co</p>
+        <p class="muted">We respond deliberately.</p>
+      </section>
+
+      <footer>
+        © 2026 Noyyal Labs · Built with HTML & <a href="https://pages.github.com/" target="_blank" style="color: inherit; text-decoration: underline;">GitHub Pages</a>
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
